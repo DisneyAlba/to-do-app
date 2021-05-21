@@ -1,14 +1,27 @@
 function updateCounters() {
-    const todo = document.querySelectorAll("li.itemTodo");
-    console.log(todo);
-    const completed = document.querySelectorAll("li.itemCompleted");
-    console.log(completed);
-    const total = todo.length + completed.length;
-    console.log(total);
+    const todo = document.querySelectorAll("li.itemTodo").length;
+    const completed = document.querySelectorAll("li.itemCompleted").length;
+    const total = todo + completed;
 
-    document.getElementById("todo-count").innerHTML = todo.length;
-    document.getElementById("completed-count").innerHTML = completed.length;
+    document.getElementById("todo-count").innerHTML = todo;
+    document.getElementById("completed-count").innerHTML = completed;
     document.getElementById("total-count").innerHTML = total;
-  }
+}
+
+updateCounters();
   
-  updateCounters();
+function toggleDone(event) {
+// get the checkbox from the event object
+const check = event.currentTarget;
+
+if (check.checked) {
+    // change the checkbox so that it shows up as completed
+    // the "completed" class is set on the parent element, the <li>
+    check.parentElement.className = "itemCompleted";
+} else {
+    // change the checkbox so that it shows up as todo
+    check.parentElement.className = "itemTodo";
+}
+// update the counters, now that we have updated the checkbox
+updateCounters();
+}

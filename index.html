@@ -16,10 +16,10 @@
             </form>
             <ul class="itemList">
                 <li class="itemTodo">
-                    <input type="checkbox">Sweep the floor
+                    <input type="checkbox" onchange="toggleDone(event)">Sweep the floor
                 </li>
                 <li class="itemCompleted">
-                    <input type="checkbox" checked>Dust the vases
+                    <input type="checkbox" checked onchange="toggleDone(event)">Dust the vases
                 </li>
             </ul>
             <div class="footer">
