@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>To-do app</title>
+        <link href="styles/style.css" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>To-do list</h1>
+            <form>
+                <input type="text" id="new-todo" placeholder="What needs to be done?">
+            </form>
+            <ul class="itemList">
+                <li class="itemTodo">
+                    <input type="checkbox">Sweep the floor
+                </li>
+                <li class="itemCompleted">
+                    <input type="checkbox" checked>Dust the vases
+                </li>
+            </ul>
+            <div class="footer">
+                To-do: <span id="todo-count">1</span> • 
+                Done: <span id="completed-count">0</span> • 
+                Total: <span id="total-count">1</span>
+            </div>
+        </div>
+    </body>
+
+</html>
