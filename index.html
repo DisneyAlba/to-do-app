@@ -11,10 +11,10 @@
     <body>
         <div class="container">
             <h1>To-do list</h1>
-            <form>
+            <form method="POST" onsubmit="addNewTodo(event)">
                 <input type="text" id="new-todo" placeholder="What needs to be done?">
             </form>
-            <ul class="itemList">
+            <ul id="itemList">
                 <li class="itemTodo">
                     <input type="checkbox" onchange="toggleDone(event)">Sweep the floor
                 </li>

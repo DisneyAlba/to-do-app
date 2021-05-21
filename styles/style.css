@@ -31,14 +31,14 @@ input#new-todo {
     padding: 5px;
 }
 
-.itemList {
+.itemTodo {
+    border: 1px solid #AAA5EE;
+    padding: 5px;
+}
+
+ul#itemList {
     list-style: none;
     width: 100%;
     margin: 20px 0 10px;
     padding: 0;
-}
-
-.itemTodo {
-    border: 1px solid #AAA5EE;
-    padding: 5px;
 }
